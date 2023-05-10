@@ -1,12 +1,22 @@
-updateResult = function () {
-    const url = new URL(window.location.href);
-    const cookieValue = document.cookie;
-    if (cookieValue && cookieValue.includes("=")) {
-        const wordCount = cookieValue.split("=")[1];
-        if (wordCount) {
-            document.getElementById('result').innerText = `The word count is ${wordCount}`;
-            // Clear the cookie after use
-            document.cookie = "result=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        }
-    }
+const fqdn = `${window.location.protocol}//${window.location.host}`;
+const form = document.getElementById("form");
+form.addEventListener("submit", submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+    const files = document.getElementById("files");
+    const formData = new FormData();
+    formData.append("file", files.files[0]);
+    fetch(`${fqdn}/upload`, {
+        method: 'POST',
+        body: formData
+    }).then((response) => response.json())
+        .then((data) => {
+            if (data && data.wordCount) {
+                document.getElementById('result').innerText = `The word count is ${data.wordCount}`;
+            } else {
+                alert("Invalid response from server");
+            }
+        })
+        .catch((err) => ("Error occured", err));
 }

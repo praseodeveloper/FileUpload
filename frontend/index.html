@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
-    <script src="script.js"></script>
+    
 </head>
 
-<body onload="updateResult()">
+<body>
     <div class="container">
         <h1>File Upload</h1>
-        <form action="/" enctype="multipart/form-data" method="post">
+        <!-- <form action="/validateAml" enctype="multipart/form-data" method="post">
             <input type="file" name="file">
             <input type="submit" id="submit-btn" value="Upload">
+        </form> -->
+        <form id='form'>
+            <div class="input-group">
+                <label for='files'>Select files</label>
+                <input id='files' type="file" multiple>
+            </div>
+            <button class="submit-btn" type='submit'>Upload</button>
         </form>
         <h2 id="result"></h2>
+        <script src="script.js"></script>
 </body>
-
 </html>
