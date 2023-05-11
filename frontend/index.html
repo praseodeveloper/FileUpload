@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
-    
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 </head>
 
 <body>
     <div class="container">
-        <h1>File Upload</h1>
-        <!-- <form action="/validateAml" enctype="multipart/form-data" method="post">
-            <input type="file" name="file">
-            <input type="submit" id="submit-btn" value="Upload">
-        </form> -->
-        <form id='form'>
-            <div class="input-group">
-                <label for='files'>Select files</label>
-                <input id='files' type="file" multiple>
+        <h1>REST API demo for TIA Portal</h1>
+        <div class="tileContainer">
+            <div class="tile">
+                <form id='validateAmlForm' class="form">
+                    <div class="input-group">
+                        <label for='file'>Select file</label>
+                        <input id='file' type="file">
+                    </div>
+                    <button class="submit-btn" type='submit'>Upload</button>
+                </form>
+                <textarea id="validateAmlResult" class="largeTextArea"></textarea>
             </div>
-            <button class="submit-btn" type='submit'>Upload</button>
-        </form>
-        <h2 id="result"></h2>
-        <script src="script.js"></script>
+            <div class="tile">
+                <form id='getMLFBForm' class="form">
+                    <button class="submit-btn" type='submit'>Get MLFB of first CPU 1516</button>
+                </form>
+                <textarea id="getMLFBResult" class="smallTextArea"></textarea>
+            </div>
+            <div class="tile">
+                <form id='getValuesForm' class="form">
+                    <button class="submit-btn" type='submit'>Get values</button>
+                </form>
+                <textarea id="getValuesResult" class="smallTextArea"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
