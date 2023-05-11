@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: lightgray;
+    background-color: #373737;
 }
 
 * {
@@ -24,7 +24,7 @@ body {
 }
 
 form {
-    background-color: white;
+    background-color: #b4beb7;
     padding: 30px;
 }
 
@@ -40,6 +40,7 @@ form label {
 form input {
     padding: 12px 20px;
     width: 100%;
+    background: whitesmoke;
     border: 1px solid #ccc;
 }
 
@@ -58,6 +59,7 @@ textarea {
     resize: vertical;
     width: var(--tile-width);
     padding: 10px;
+    border: 1px;
 }
 
 .largeTextArea {
@@ -75,7 +77,6 @@ textarea {
 }
 
 .disabledForm {
-    opacity: 0.4;
     pointer-events: none;
 }
 
