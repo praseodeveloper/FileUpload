@@ -1,18 +1,19 @@
 /* style.css */
 body {
-    background-color: gray;
+    background-color: lightgray;
 }
 * {
     box-sizing: border-box;
 }
 .container {
     max-width: 500px;
-    margin: 60px auto;
+    margin: 20px;
 }
 
 .container h1,.container h2 {
     text-align: center;
-    color: cyan;
+    color: teal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 form {
     background-color: white;
@@ -33,9 +34,9 @@ form input {
 .submit-btn {
     width: 100%;
     border: none;
-    background: cyan;
+    background: teal;
     font-size: 18px;
-    color: black;
+    color: white;
     border-radius: 3px;
     padding: 20px;
     text-align: center;
@@ -52,7 +53,7 @@ textarea.largeTextArea {
 }
 
 textarea.smallTextArea {
-    height: 100px;
+    height: 60px;
 }
 
 .tileContainer {

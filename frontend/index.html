@@ -10,6 +10,21 @@
     <div class="container">
         <h1>REST API demo for TIA Portal</h1>
         <div class="tileContainer">
+
+            <div class="tile">
+                <form id='getValuesForm' class="form">
+                    <button class="submit-btn" type='submit'>Test API</button>
+                </form>
+                <textarea id="getValuesResult" class="smallTextArea"></textarea>
+            </div>
+
+            <div class="tile">
+                <form id='getMLFBForm' class="form">
+                    <button class="submit-btn" type='submit'>Get MLFB of first CPU 1516</button>
+                </form>
+                <textarea id="getMLFBResult" class="smallTextArea"></textarea>
+            </div>
+
             <div class="tile">
                 <form id='validateAmlForm' class="form">
                     <div class="input-group">
@@ -20,18 +35,7 @@
                 </form>
                 <textarea id="validateAmlResult" class="largeTextArea"></textarea>
             </div>
-            <div class="tile">
-                <form id='getMLFBForm' class="form">
-                    <button class="submit-btn" type='submit'>Get MLFB of first CPU 1516</button>
-                </form>
-                <textarea id="getMLFBResult" class="smallTextArea"></textarea>
-            </div>
-            <div class="tile">
-                <form id='getValuesForm' class="form">
-                    <button class="submit-btn" type='submit'>Get values</button>
-                </form>
-                <textarea id="getValuesResult" class="smallTextArea"></textarea>
-            </div>
+
         </div>
     </div>
     <script src="script.js"></script>

@@ -1,5 +1,7 @@
 const fqdn = `${window.location.protocol}//${window.location.host}`;
 
+//---------- FORM submit event handlers ------------------
+
 const validateAmlForm = document.getElementById("validateAmlForm");
 validateAmlForm.addEventListener("submit", submitValidateAmlForm);
 
@@ -8,6 +10,8 @@ getMLFBForm.addEventListener("submit", submitGetMLFBForm);
 
 const getValuesForm = document.getElementById("getValuesForm");
 getValuesForm.addEventListener("submit", submitGetValuesForm);
+
+//---------- Event handler implementation ------------------
 
 function submitValidateAmlForm(e) {
     this.classList.add("disabledForm");
