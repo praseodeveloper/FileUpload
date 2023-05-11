@@ -9,20 +9,27 @@
 <body>
     <div class="container">
         <h1>REST API demo for TIA Portal</h1>
+
         <div class="tileContainer">
 
             <div class="tile">
                 <form id='getValuesForm' class="form">
                     <button class="submit-btn" type='submit'>Test API</button>
                 </form>
-                <textarea id="getValuesResult" class="smallTextArea"></textarea>
+                <div class="loaderContainer">
+                    <textarea id="getValuesResult" class="smallTextArea"></textarea>
+                    <img id="getValuesBusyImg" class="loader" src="loading.gif">
+                </div>
             </div>
 
             <div class="tile">
                 <form id='getMLFBForm' class="form">
                     <button class="submit-btn" type='submit'>Get MLFB of first CPU 1516</button>
                 </form>
-                <textarea id="getMLFBResult" class="smallTextArea"></textarea>
+                <div class="loaderContainer">
+                    <textarea id="getMLFBResult" class="smallTextArea"></textarea>
+                    <img id="getMLFBBusyImg" class="loader" src="loading.gif">
+                </div>
             </div>
 
             <div class="tile">
@@ -33,7 +40,10 @@
                     </div>
                     <button class="submit-btn" type='submit'>Upload</button>
                 </form>
-                <textarea id="validateAmlResult" class="largeTextArea"></textarea>
+                <div class="loaderContainer">
+                    <textarea id="validateAmlResult" class="largeTextArea"></textarea>
+                    <img id="validateAmlBusyImg" class="loader" src="loading.gif">
+                </div>
             </div>
 
         </div>

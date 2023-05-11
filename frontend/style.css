@@ -1,36 +1,48 @@
 /* style.css */
+:root {
+    --tile-width: 650px;
+}
+
 body {
     background-color: lightgray;
 }
+
 * {
     box-sizing: border-box;
 }
+
 .container {
-    max-width: 500px;
+    max-width: var(--tile-width);
     margin: 20px;
 }
 
-.container h1,.container h2 {
+.container h1,
+.container h2 {
     text-align: center;
     color: teal;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 form {
     background-color: white;
     padding: 30px;
 }
+
 form .input-group {
     margin-bottom: 15px;
 }
+
 form label {
     display: block;
     margin-bottom: 10px;
 }
+
 form input {
     padding: 12px 20px;
     width: 100%;
     border: 1px solid #ccc;
 }
+
 .submit-btn {
     width: 100%;
     border: none;
@@ -44,15 +56,15 @@ form input {
 
 textarea {
     resize: vertical;
-    width: 500px;
+    width: var(--tile-width);
     padding: 10px;
 }
 
-textarea.largeTextArea {
+.largeTextArea {
     height: 300px;
 }
 
-textarea.smallTextArea {
+.smallTextArea {
     height: 60px;
 }
 
@@ -65,4 +77,23 @@ textarea.smallTextArea {
 .disabledForm {
     opacity: 0.4;
     pointer-events: none;
+}
+
+.loaderContainer {
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    display: none;
+}
+
+.activeLoader {
+    display: block;
 }

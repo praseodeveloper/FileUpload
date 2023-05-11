@@ -7,7 +7,7 @@ const fs = require('fs');
 const http = require('http');
 const pd = require('pretty-data').pd;
 
-const port = 80;
+const port = 8989;
 
 //const opennessHost = '18.159.149.25'; // Public subnet server IP
 const opennessHost = '10.46.24.114';  // Private subnet server IP
@@ -25,6 +25,10 @@ app.get('^/:js(*.js)', (req, res) => {
 
 app.get('^/:css(*.css)', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend', req.params.css));
+});
+
+app.get('^/:gif(*.gif)', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', req.params.gif));
 });
 
 app.post('/upload', upload.single('file'), (req, res) => {
