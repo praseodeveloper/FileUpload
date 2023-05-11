@@ -7,7 +7,7 @@ const fs = require('fs');
 const http = require('http');
 const pd = require('pretty-data').pd;
 
-const port = 8989;
+const port = 80;
 
 //const opennessHost = '18.159.149.25'; // Public subnet server IP
 const opennessHost = '10.46.24.114';  // Private subnet server IP
@@ -44,7 +44,6 @@ app.post('/upload', upload.single('file'), (req, res) => {
 
 app.post('/api/AmlValidation', upload.single('file'), (req, res) => {
     if (req.file) {
-        const filePath = req.file.path;
         fs.readFile(req.file.path, 'utf8', (err, contents) => {
             if (err) {
                 res.status(500).send({ error: err });
