@@ -1,7 +1,4 @@
 /* style.css */
-:root {
-    --tile-width: 650px;
-}
 
 body {
     background-color: #373737;
@@ -12,15 +9,22 @@ body {
 }
 
 .container {
-    max-width: var(--tile-width);
-    margin: 20px;
+    max-width: 650px;
+    margin: auto;    
 }
 
-.container h1,
-.container h2 {
+.container h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     color: teal;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 0;
+}
+
+.subText {
+    margin-top: 0;
+    margin-bottom:0;
+    text-align: right;
+    color: teal;
 }
 
 form {
@@ -57,7 +61,7 @@ form input {
 
 textarea {
     resize: vertical;
-    width: var(--tile-width);
+    width: 100%;
     padding: 10px;
     border: 1px;
 }
