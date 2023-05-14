@@ -9,8 +9,8 @@ const pd = require('pretty-data').pd;
 
 const port = 8989;
 
-//const opennessHost = '18.159.149.25'; // Public subnet server IP
-const opennessHost = '10.46.24.114';  // Private subnet server IP
+const opennessHost = '18.159.149.25'; // Public subnet server IP of the backend windows service
+//const opennessHost = '10.46.24.114';  // Private subnet server IP
 const opennessPort = 10281;
 
 ["/", "/index.html"].forEach(function (entryPoint) {
@@ -85,6 +85,7 @@ app.post('/api/AmlValidation', upload.single('file'), (req, res) => {
                 var request = http.request(urlparams, onResponse); //Create a request object.`
                 // contents = contents.replace(/\r\n/g, '');
                 contents = pd.xmlmin(contents, true);
+                contents = contents.replace(/^\uFEFF/, '');
                 var requestBody = JSON.stringify({ "AmlContent": contents });
                 console.log(`Request body : ${requestBody}`);
                 request.write(requestBody); //Send off the request.
